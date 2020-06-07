@@ -1,0 +1,13 @@
+version: '2'
+services:
+  samba:
+    image: samba
+    ports:
+     - "139:139"
+     - "445:445"
+     - "137:137/udp"
+     - "138:138/udp"
+    volumes:
+     - /opt/samba/etc/samba:/etc/samba:Z
+     - /media/volume/public:/media/volume/public:z
+     - /media/volume/documents:/media/volume/documents:z
